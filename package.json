@@ -1,0 +1,16 @@
+{
+  "name": "smart-seat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Seat Temporary Leave Management System - Hub / Firmware / Dashboard / Simulator",
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "hub": "node server/index.js",
+    "sim": "node simulator/seat-sim.js",
+    "sim:demo": "node simulator/seat-sim.js --demo",
+    "sim:all": "node simulator/seat-sim.js --all",
+    "test": "node tests/smoke.js"
+  }
+}

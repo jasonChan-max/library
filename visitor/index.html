@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="出发前查看图书馆自习室的实时空闲座位。">
+  <title>图书馆自习室 · 座位查询</title>
+  <link rel="stylesheet" href="/visit/site.css">
+  <script src="/visit/site.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <div class="identity"><span class="emblem" aria-hidden="true"></span>图书馆 · 自习室</div>
+      <span id="connection" class="connection" role="status">正在连接</span>
+    </div>
+  </header>
+  <main class="shell">
+    <section class="overview" aria-labelledby="title">
+      <div class="intro">
+        <h1 id="title">自习室座位</h1>
+        <p>出发前，先看看哪里有空位。</p>
+        <p class="updated" id="updated"></p>
+      </div>
+      <div class="availability">
+        <div class="availability-main">
+          <span>当前空闲</span>
+          <p><strong id="available">—</strong><span> 个座位</span></p>
+        </div>
+        <dl class="totals">
+          <div><dt>使用中</dt><dd id="occupied">—</dd></div>
+          <div><dt>暂离</dt><dd id="away">—</dd></div>
+          <div><dt>待确认</dt><dd id="unknown">—</dd></div>
+        </dl>
+      </div>
+    </section>
+    <section class="floor" aria-labelledby="floor-title">
+      <div class="floor-head">
+        <h2 id="floor-title">各区座位</h2>
+        <div class="filters">
+          <label for="zone">区域</label>
+          <select id="zone"><option value="">全部区域</option></select>
+          <label class="toggle"><input id="only-available" type="checkbox"> 只看空闲</label>
+        </div>
+      </div>
+      <p class="status-note">暂离座位会保留给原使用者。待确认表示设备未连接或状态暂不可用。</p>
+      <p id="empty" class="empty">正在获取座位状态…</p>
+      <div id="zones" class="zones"></div>
+    </section>
+  </main>
+</body>
+</html>

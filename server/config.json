@@ -1,0 +1,8 @@
+{
+  "awayDurationMin": 15,
+  "alertLeadSec": 60,
+  "graceSec": 30,
+  "heartbeatMs": 5000,
+  "offlineAfterMs": 15000,
+  "soundEnabled": true
+}
